@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wgh@300;400;500;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.navigation{
+position: relative;
+width: 350px;
+height: 70px;
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    line-height: 75px;
+    transition: 0.5s;
+    font-size: 40px;
+}
+
+.navigation ul li.active a .icon{
+    font-size:30px;
+    transform: translateY(-10px);
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    bottom: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transform: scale(0);
+}
+
+.navigation ul li:active a .text{
+    transform: scale(1);
+}
+
+.indicator{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(75, 224, 16);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.navigation ul li:nth-child(1).active~ .indicator{
+    background: rgb(75, 224, 16);
+    box-shadow: 0 15px 25px rgb(75, 224, 16);
+    transform: translateX(calc(70px*0));
+}
+
+.navigation ul li:nth-child(2).active~ .indicator{
+    background: rgb(75, 22, 113);
+    box-shadow: 0 15px 25px rgb(75, 22, 113);
+    transform: translateX(calc(70px*1));
+}
+
+.navigation ul li:nth-child(3).active~ .indicator{
+    background: rgb(706, 140, 106);
+    box-shadow: 0 15px 25px rgb(706, 140, 106);
+    transform: translateX(calc(70px*2));
+}
+
+.navigation ul li:nth-child(4).active~ .indicator{
+    background: rgb(21, 22, 113);
+    box-shadow: 0 15px 25px rgb(21, 22, 113);
+    transform: translateX(calc(70px*3));
+}
+
+.navigation ul li:nth-child(5).active~ .indicator{
+    background: rgb(750, 24, 16);
+    box-shadow: 0 15px 25px rgb(750, 24, 16);
+    transform: translateX(calc(70px*4));
+}
